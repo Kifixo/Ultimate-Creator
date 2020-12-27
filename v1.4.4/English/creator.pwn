@@ -32064,7 +32064,46 @@ IsValidObjectModel(modelid)
 
 IsValidVehicleModel(modelid)
 {
-	if(400 <= modelid <= 611) return 1;
+	if(400 <= modelid <= 614) return 1;
+	if(25353 <= modelid <= 25712) return 1;
+	if(662 <= modelid <= 668) return 1;
+	if(modelid == 699) return 1;
+	if(793 <= modelid <= 799) return 1;
+	if(modelid == 965) return 1;
+	if(modelid == 999) return 1;
+	if(1194 <= modelid <= 1206) return 1;
+	if(modelid == 1326) return 1;
+	if(modelid == 1573) return 1;
+	if(modelid == 1699) return 1;
+	if(modelid == 2883) return 1;
+	if(modelid == 2884) return 1;
+	if(3136 <= modelid <= 3141) return 1;
+	if(3222 <= modelid <= 3224) return 1;
+	if(modelid == 3247) return 1;
+	if(modelid == 3248) return 1;
+	if(modelid == 3251) return 1;
+	if(modelid == 3416) return 1;
+	if(4769 <= modelid <= 4804) return 1;
+	if(5090 <= modelid <= 5092) return 1;
+	if(modelid == 5094) return 1;
+	if(modelid == 5099) return 1;
+	if(modelid == 5100) return 1;
+	if(modelid == 5101) return 1;
+	if(modelid == 5690) return 1;
+	if(5693 <= modelid <= 5696) return 1;
+	if(modelid == 5701) return 1;
+	if(modelid == 5702) return 1;
+	if(6027 <= modelid <= 6030) return 1;
+	if(6258 <= modelid <= 6274) return 1;
+	if(modelid == 6526) return 1;
+	if(6528 <= modelid <= 6230) return 1;
+	if(modelid == 6532) return 1;
+	if(modelid == 6537) return 1;
+	if(modelid == 6538) return 1;
+	if(6550 <= modelid <= 6720) return 1;
+	if(modelid == 6754) return 1;
+	if(6757 <= modelid <= 6799) return 1;
+	if(modelid == 7974) return 1;
 	return 0;
 }
 
