@@ -1,4 +1,4 @@
-//Ultimate Creator by Nexius v1.4.3
+//Ultimate Creator by Nexius v1.4.4
 
 #define FILTERSCRIPT
 
@@ -40,10 +40,11 @@
 	#endif
 #endif
 
-#define ONLY_FOR_RCON_ADMINS //Comment to disable
+//Uncomment to enable
+//#define ONLY_FOR_RCON_ADMINS
 //#define CREATOR_DEBUG
 
-#define CREATOR_VERSION				"1.4.3"
+#define CREATOR_VERSION				"1.4.4"
 
 #define DEFAULT_COLOR				-1
 
@@ -78,7 +79,7 @@
 #define MAP_DOES_NOT_EXIST_SAVE_ERROR	"You need to create a map in order to save it!"
 #define MAP_SAVED						"%s has saved the map %s"
 #define SAVE_MAP_ERROR					"An error occurred while saving the map!"
-#define ENTER_MAP_NAME_FOR_SAVE			"Enter the name of map you want to save:"
+#define ENTER_MAP_NAME_TO_SAVE			"Enter the name of map you want to save:"
 #define ENTER_MAP_NAME_ERROR			"You need to enter the name of map!"
 #define MAP_CREATED						"%s has created a new map"
 #define MAP_OPENED						"%s has opened the map %s"
@@ -390,8 +391,9 @@
 #define OPEN_MAP_WARNING				"Are you sure you want to open the map?"
 #define OPEN_MAP_OVER_WARNING			"Are you sure you want to open the map over the current one?"
 #define OPEN_MAP_OVER_WARNING_2			"All previously created objects will not be deleted."
-#define ENTER_MAP_NAME_FOR_OPEN			"Enter the name of map you want to open:"
-#define ENTER_MAP_NAME_FOR_DELETE		"Enter the name of map you want to delete:"
+#define ENTER_MAP_NAME					"Enter map name..."
+#define ENTER_MAP_NAME_TO_OPEN			"Enter the name of map you want to open:"
+#define ENTER_MAP_NAME_TO_DELETE		"Enter the name of map you want to delete:"
 #define CREATE							"Create"
 #define EDIT							"Edit"
 #define DUPLICATES						"Find duplicates"
@@ -687,151 +689,151 @@
 #define ENTER_GRAVITY_VALUE				"Enter the value of gravity"
 #define GRAVITY_NOW						"Current gravity:"
 #define KEY_INSTRUCTION_STRING_1		"LAlt (KEY_WALK) - Slow moving/movement"
-#define KEY_INSTRUCTION_STRING_2		"LShift (KEY_JUMP) - Accelerate the moving/movement"
+#define KEY_INSTRUCTION_STRING_2		"LShift (KEY_JUMP) - Acceleration of moving/movement"
 #define KEY_INSTRUCTION_STRING_3		"LShift (KEY_JUMP) + LAlt (KEY_WALK) - Objects mapping considering surface incline"
 #define KEY_INSTRUCTION_STRING_4		"LMB (KEY_FIRE) - Select an object/vehicle/actor..."
-#define KEY_INSTRUCTION_STRING_5		"* W, A, S, D - The movement of the selected object/vehicle/actor..."
-#define KEY_INSTRUCTION_STRING_6		"* LShift (KEY_JUMP) + LAlt (KEY_WALK) + W, A, S, D - Movement on the Z-axis of the selected object/vehicle/actor..."
-#define KEY_INSTRUCTION_STRING_7		"* LCtrl (KEY_FIRE) + W, A, S, D - Changing the rotation angle of the selected object/vehicle/actor..."
-#define KEY_INSTRUCTION_STRING_8		"* LCtrl (KEY_FIRE) + LShift (KEY_JUMP) + LAlt (KEY_WALK) + W, A, S, D - Changing the rotation angle on the X-axis of the selected object/vehicle/actor..."
+#define KEY_INSTRUCTION_STRING_5		"* W, A, S, D - Movement of selected object/vehicle/actor..."
+#define KEY_INSTRUCTION_STRING_6		"* LShift (KEY_JUMP) + LAlt (KEY_WALK) + W, A, S, D - Movement on the Z-axis of selected object/vehicle/actor..."
+#define KEY_INSTRUCTION_STRING_7		"* LCtrl (KEY_FIRE) + W, A, S, D - Changing the rotation angle of selected object/vehicle/actor..."
+#define KEY_INSTRUCTION_STRING_8		"* LCtrl (KEY_FIRE) + LShift (KEY_JUMP) + LAlt (KEY_WALK) + W, A, S, D - Changing the rotation angle along the X-axis of selected object/vehicle/actor..."
 #define KEY_INSTRUCTION_STRING_9		"RMB (KEY_HANDBRAKE) - Moving an object/vehicle/actor... by mouse"
 #define KEY_INSTRUCTION_STRING_10		"Space (KEY_SPRINT) - Remove select/movement of an object/vehicle/actor..."
 #define KEY_INSTRUCTION_STRING_11		"C (KEY_CROUCH) + LMB (KEY_FIRE) - Copy an object/vehicle/actor..."
-#define KEY_INSTRUCTION_STRING_12		"* LShift (KEY_JUMP) + LAlt (KEY_WALK) + C (KEY_CROUCH) + LMB (KEY_FIRE) - Copy an attached object/3D text"
+#define KEY_INSTRUCTION_STRING_12		"* LShift (KEY_JUMP) + LAlt (KEY_WALK) + C (KEY_CROUCH) + LMB (KEY_FIRE) - Copy attached object/3D text"
 #define KEY_INSTRUCTION_STRING_13		"\\ (KEY_ACTION) + LMB (KEY_FIRE) - Delete an object/vehicle/actor..."
 #define CMD_INSTRUCTION_CAPTION_1		"Map management"
-#define CMD_INSTRUCTION_STRING_1_1		"/newmap - create a new map"
-#define CMD_INSTRUCTION_STRING_1_2		"/loadmap - load an existing map"
+#define CMD_INSTRUCTION_STRING_1_1		"/newmap - create new map"
+#define CMD_INSTRUCTION_STRING_1_2		"/loadmap - load existing map"
 #define CMD_INSTRUCTION_STRING_1_3		"/loadover - load map over the current one"
 #define CMD_INSTRUCTION_STRING_1_4		"/renamemap - change name of the current map"
 #define CMD_INSTRUCTION_STRING_1_5		"/savemap - save the current map"
 #define CMD_INSTRUCTION_STRING_1_6		"/delmap - delete map"
 #define CMD_INSTRUCTION_CAPTION_2		"Objects"
-#define CMD_INSTRUCTION_STRING_2_1		"/newobj - create an object"
-#define CMD_INSTRUCTION_STRING_2_2		"/delobj - delete the selected object"
-#define CMD_INSTRUCTION_STRING_2_3		"/cobj - copy the selected object"
-#define CMD_INSTRUCTION_STRING_2_4		"/caobj - copy the selected attached object"
-#define CMD_INSTRUCTION_STRING_2_5		"/selobj [object ID] - select an object by ID"
-#define CMD_INSTRUCTION_STRING_2_6		"/gotoobj - teleport to the selected object"
-#define CMD_INSTRUCTION_STRING_2_7		"/getobj - teleport the selected object to yourself"
+#define CMD_INSTRUCTION_STRING_2_1		"/newobj - create object"
+#define CMD_INSTRUCTION_STRING_2_2		"/delobj - delete selected object"
+#define CMD_INSTRUCTION_STRING_2_3		"/cobj - copy selected object"
+#define CMD_INSTRUCTION_STRING_2_4		"/caobj - copy selected attached object"
+#define CMD_INSTRUCTION_STRING_2_5		"/selobj [object ID] - select object by ID"
+#define CMD_INSTRUCTION_STRING_2_6		"/gotoobj - teleport to selected object"
+#define CMD_INSTRUCTION_STRING_2_7		"/getobj - teleport selected object to yourself"
 #define CMD_INSTRUCTION_STRING_2_8		"/stickobj - stick selected object to surface"
 #define CMD_INSTRUCTION_STRING_2_9		"/inclineobj - stick selected object to surface with incline"
-#define CMD_INSTRUCTION_STRING_2_10		"/objtext - text editor on the selected object"
-#define CMD_INSTRUCTION_STRING_2_11		"/oplattach [player ID] - attach the selected object to player"
-#define CMD_INSTRUCTION_STRING_2_12		"/oobjattach [object ID] - attach the selected object to object"
-#define CMD_INSTRUCTION_STRING_2_13		"/ovehattach [vehicle ID] - attach the selected object to vehicle"
-#define CMD_INSTRUCTION_STRING_2_14		"/objx - /objy - /objz - set position of the selected object"
-#define CMD_INSTRUCTION_STRING_2_15		"/objrx - /objry - /objrz - set rotation angles of the selected object"
-#define CMD_INSTRUCTION_STRING_2_16		"/objrreset - reset rotation angles of the selected object"
+#define CMD_INSTRUCTION_STRING_2_10		"/objtext - text editor on selected object"
+#define CMD_INSTRUCTION_STRING_2_11		"/oplattach [player ID] - attach selected object to player"
+#define CMD_INSTRUCTION_STRING_2_12		"/oobjattach [object ID] - attach selected object to object"
+#define CMD_INSTRUCTION_STRING_2_13		"/ovehattach [vehicle ID] - attach selected object to vehicle"
+#define CMD_INSTRUCTION_STRING_2_14		"/objx - /objy - /objz - set position of selected object"
+#define CMD_INSTRUCTION_STRING_2_15		"/objrx - /objry - /objrz - set rotation angles of selected object"
+#define CMD_INSTRUCTION_STRING_2_16		"/objrreset - reset rotation angles of selected object"
 #define CMD_INSTRUCTION_CAPTION_3		"Textures"
-#define CMD_INSTRUCTION_STRING_3_1		"/txdset [layer ID] [texture ID] - set material of the selected object"
-#define CMD_INSTRUCTION_STRING_3_2		"/txdreset [layer ID] - reset material of the selected object"
-#define CMD_INSTRUCTION_STRING_3_3		"/txdcolor [layer ID] [hex code] - set color of the selected object"
-#define CMD_INSTRUCTION_STRING_3_4		"/txdcreset [layer ID] - reset color of the selected object"
-#define CMD_INSTRUCTION_STRING_3_5		"/tcopy [layer ID] - copy text/texture of the selected object"
-#define CMD_INSTRUCTION_STRING_3_6		"/tpaste [layer ID] - paste text/texture on the selected object"
-#define CMD_INSTRUCTION_STRING_3_7		"/treset [layer ID] - reset text/texture of the selected object"
-#define CMD_INSTRUCTION_STRING_3_8		"/tcopyall - copy text and textures of the selected object from all layers"
-#define CMD_INSTRUCTION_STRING_3_9		"/tpasteall - paste text and textures on all layers of the selected object"
-#define CMD_INSTRUCTION_STRING_3_10		"/tresetall - reset text and textures of the selected object from all layers"
+#define CMD_INSTRUCTION_STRING_3_1		"/txdset [layer ID] [texture ID] - set material of selected object"
+#define CMD_INSTRUCTION_STRING_3_2		"/txdreset [layer ID] - reset material of selected object"
+#define CMD_INSTRUCTION_STRING_3_3		"/txdcolor [layer ID] [hex code] - set color of selected object"
+#define CMD_INSTRUCTION_STRING_3_4		"/txdcreset [layer ID] - reset color of selected object"
+#define CMD_INSTRUCTION_STRING_3_5		"/tcopy [layer ID] - copy text/texture of selected object"
+#define CMD_INSTRUCTION_STRING_3_6		"/tpaste [layer ID] - paste text/texture on selected object"
+#define CMD_INSTRUCTION_STRING_3_7		"/treset [layer ID] - reset text/texture of selected object"
+#define CMD_INSTRUCTION_STRING_3_8		"/tcopyall - copy text and textures of selected object from all layers"
+#define CMD_INSTRUCTION_STRING_3_9		"/tpasteall - paste text and textures on all layers of selected object"
+#define CMD_INSTRUCTION_STRING_3_10		"/tresetall - reset text and textures of selected object from all layers"
 #define CMD_INSTRUCTION_STRING_3_11		"/tclear - clear text and textures clipboard"
 #define CMD_INSTRUCTION_CAPTION_4		"Vehicles"
-#define CMD_INSTRUCTION_STRING_4_1		"/newveh - create a vehicle"
-#define CMD_INSTRUCTION_STRING_4_2		"/delveh - delete the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_3		"/cveh - copy the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_4		"/selveh [vehicle ID] - select a vehicle by ID"
-#define CMD_INSTRUCTION_STRING_4_5		"/gotoveh - teleport to the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_6		"/getveh - teleport the selected vehicle to yourself"
+#define CMD_INSTRUCTION_STRING_4_1		"/newveh - create vehicle"
+#define CMD_INSTRUCTION_STRING_4_2		"/delveh - delete selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_3		"/cveh - copy selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_4		"/selveh [vehicle ID] - select vehicle by ID"
+#define CMD_INSTRUCTION_STRING_4_5		"/gotoveh - teleport to selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_6		"/getveh - teleport selected vehicle to yourself"
 #define CMD_INSTRUCTION_STRING_4_7		"/stickveh - stick selected vehicle to surface"
-#define CMD_INSTRUCTION_STRING_4_8		"/vehrepair - repair the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_9		"/vehx - /vehy - /vehz - set position of the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_10		"/vehrz - set rotation angle of the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_11		"/vehrtime - set respawn time of the selected vehicle"
-#define CMD_INSTRUCTION_STRING_4_12		"/vehcolor - set colors of the selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_8		"/vehrepair - repair selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_9		"/vehx - /vehy - /vehz - set position of selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_10		"/vehrz - set rotation angle of selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_11		"/vehrtime - set respawn time of selected vehicle"
+#define CMD_INSTRUCTION_STRING_4_12		"/vehcolor - set colors of selected vehicle"
 #define CMD_INSTRUCTION_CAPTION_5		"Tuning"
-#define CMD_INSTRUCTION_STRING_5_1		"/compadd - add component on the selected vehicle"
-#define CMD_INSTRUCTION_STRING_5_2		"/complist - viewing and deleting components on the selected vehicle"
-#define CMD_INSTRUCTION_STRING_5_3		"/compremoveall - remove all components from the selected vehicle"
+#define CMD_INSTRUCTION_STRING_5_1		"/compadd - add component on selected vehicle"
+#define CMD_INSTRUCTION_STRING_5_2		"/complist - viewing and deleting components on selected vehicle"
+#define CMD_INSTRUCTION_STRING_5_3		"/compremoveall - remove all components from selected vehicle"
 #define CMD_INSTRUCTION_STRING_5_4		"/paintjob - set paintjob (for certain vehicles)"
-#define CMD_INSTRUCTION_STRING_5_5		"/pjobremove - remove paintjob from the selected vehicle"
+#define CMD_INSTRUCTION_STRING_5_5		"/pjobremove - remove paintjob from selected vehicle"
 #define CMD_INSTRUCTION_CAPTION_6		"Actors"
-#define CMD_INSTRUCTION_STRING_6_1		"/newact - create an actor"
-#define CMD_INSTRUCTION_STRING_6_2		"/delact - delete the selected actor"
-#define CMD_INSTRUCTION_STRING_6_3		"/cact - copy the selected actor"
-#define CMD_INSTRUCTION_STRING_6_4		"/selact [actor ID] - select an actor by ID"
-#define CMD_INSTRUCTION_STRING_6_5		"/gotoact - teleport to the selected actor"
-#define CMD_INSTRUCTION_STRING_6_6		"/getact - teleport the selected actor to yourself"
+#define CMD_INSTRUCTION_STRING_6_1		"/newact - create actor"
+#define CMD_INSTRUCTION_STRING_6_2		"/delact - delete selected actor"
+#define CMD_INSTRUCTION_STRING_6_3		"/cact - copy selected actor"
+#define CMD_INSTRUCTION_STRING_6_4		"/selact [actor ID] - select actor by ID"
+#define CMD_INSTRUCTION_STRING_6_5		"/gotoact - teleport to selected actor"
+#define CMD_INSTRUCTION_STRING_6_6		"/getact - teleport selected actor to yourself"
 #define CMD_INSTRUCTION_STRING_6_7		"/stickact - stick selected actor to surface"
-#define CMD_INSTRUCTION_STRING_6_8		"/actanim - set animation to the selected actor"
-#define CMD_INSTRUCTION_STRING_6_9		"/actclear - reset the animation to the selected actor"
-#define CMD_INSTRUCTION_STRING_6_10		"/actx - /acty - /actz - set position of the selected actor"
-#define CMD_INSTRUCTION_STRING_6_11		"/actrz - set rotation angle of the selected actor"
+#define CMD_INSTRUCTION_STRING_6_8		"/actanim - set animation to selected actor"
+#define CMD_INSTRUCTION_STRING_6_9		"/actclear - reset the animation to selected actor"
+#define CMD_INSTRUCTION_STRING_6_10		"/actx - /acty - /actz - set position of selected actor"
+#define CMD_INSTRUCTION_STRING_6_11		"/actrz - set rotation angle of selected actor"
 #define CMD_INSTRUCTION_CAPTION_7		"Pickups"
-#define CMD_INSTRUCTION_STRING_7_1		"/newpick - create a pickup"
-#define CMD_INSTRUCTION_STRING_7_2		"/delpick - delete the selected pickup"
-#define CMD_INSTRUCTION_STRING_7_3		"/cpick - copy the selected pickup"
-#define CMD_INSTRUCTION_STRING_7_4		"/selpick [pickup ID] - select a pickup by ID"
-#define CMD_INSTRUCTION_STRING_7_5		"/gotopick - teleport to the selected pickup"
-#define CMD_INSTRUCTION_STRING_7_6		"/getpick - teleport the selected pickup to yourself"
+#define CMD_INSTRUCTION_STRING_7_1		"/newpick - create pickup"
+#define CMD_INSTRUCTION_STRING_7_2		"/delpick - delete selected pickup"
+#define CMD_INSTRUCTION_STRING_7_3		"/cpick - copy selected pickup"
+#define CMD_INSTRUCTION_STRING_7_4		"/selpick [pickup ID] - select pickup by ID"
+#define CMD_INSTRUCTION_STRING_7_5		"/gotopick - teleport to selected pickup"
+#define CMD_INSTRUCTION_STRING_7_6		"/getpick - teleport selected pickup to yourself"
 #define CMD_INSTRUCTION_STRING_7_7		"/stickpick - stick selected pickup to surface"
-#define CMD_INSTRUCTION_STRING_7_8		"/picktype - set type of the selected pickup"
-#define CMD_INSTRUCTION_STRING_7_9		"/pickx - /picky - /pickz - set position of the selected pickup"
-#define CMD_INSTRUCTION_STRING_7_10		"/pickvw - set virtual world of the selected pickup"
+#define CMD_INSTRUCTION_STRING_7_8		"/picktype - set type of selected pickup"
+#define CMD_INSTRUCTION_STRING_7_9		"/pickx - /picky - /pickz - set position of selected pickup"
+#define CMD_INSTRUCTION_STRING_7_10		"/pickvw - set virtual world of selected pickup"
 #define CMD_INSTRUCTION_CAPTION_8		"Checkpoints"
-#define CMD_INSTRUCTION_STRING_8_1		"/newcp - create a checkpoint"
-#define CMD_INSTRUCTION_STRING_8_2		"/delcp - delete the checkpoint"
-#define CMD_INSTRUCTION_STRING_8_3		"/selcp - select the checkpoint"
-#define CMD_INSTRUCTION_STRING_8_4		"/gotocp - teleport to the checkpoint"
-#define CMD_INSTRUCTION_STRING_8_5		"/getcp - teleport the checkpoint to yourself"
-#define CMD_INSTRUCTION_STRING_8_6		"/cpx - /cpy - set position of the checkpoint"
-#define CMD_INSTRUCTION_STRING_8_7		"/cpsize - set size of the checkpoint"
+#define CMD_INSTRUCTION_STRING_8_1		"/newcp - create checkpoint"
+#define CMD_INSTRUCTION_STRING_8_2		"/delcp - delete checkpoint"
+#define CMD_INSTRUCTION_STRING_8_3		"/selcp - select checkpoint"
+#define CMD_INSTRUCTION_STRING_8_4		"/gotocp - teleport to checkpoint"
+#define CMD_INSTRUCTION_STRING_8_5		"/getcp - teleport checkpoint to yourself"
+#define CMD_INSTRUCTION_STRING_8_6		"/cpx - /cpy - set position of checkpoint"
+#define CMD_INSTRUCTION_STRING_8_7		"/cpsize - set size of checkpoint"
 #define CMD_INSTRUCTION_CAPTION_9		"Race checkpoints"
-#define CMD_INSTRUCTION_STRING_9_1		"/newrcp - create a race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_2		"/delrcp - delete the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_3		"/selrcp - select the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_4		"/gotorcp - teleport to the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_5		"/getrcp - teleport the race checkpoint to yourself"
-#define CMD_INSTRUCTION_STRING_9_6		"/rcptype - set type of the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_7		"/rcpx - /rcpy - /rcpz - set position of the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_8		"/rcpnextx - /rcpnexty - /rcpnextz - arrow pointer's position of the race checkpoint"
-#define CMD_INSTRUCTION_STRING_9_9		"/rcpsize - set size of the race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_1		"/newrcp - create race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_2		"/delrcp - delete race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_3		"/selrcp - select race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_4		"/gotorcp - teleport to race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_5		"/getrcp - teleport race checkpoint to yourself"
+#define CMD_INSTRUCTION_STRING_9_6		"/rcptype - set type of race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_7		"/rcpx - /rcpy - /rcpz - set position of race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_8		"/rcpnextx - /rcpnexty - /rcpnextz - arrow pointer's position of race checkpoint"
+#define CMD_INSTRUCTION_STRING_9_9		"/rcpsize - set size of race checkpoint"
 #define CMD_INSTRUCTION_CAPTION_10		"Map icons"
-#define CMD_INSTRUCTION_STRING_10_1		"/newicon - create a map icon"
-#define CMD_INSTRUCTION_STRING_10_2		"/delicon - delete the selected map icon"
-#define CMD_INSTRUCTION_STRING_10_3		"/cicon - copy the selected map icon"
-#define CMD_INSTRUCTION_STRING_10_4		"/selicon [map icon ID] - select a map icon by ID"
-#define CMD_INSTRUCTION_STRING_10_5		"/gotoicon - teleport to the selected map icon"
-#define CMD_INSTRUCTION_STRING_10_6		"/geticon - teleport the selected map icon to yourself"
-#define CMD_INSTRUCTION_STRING_10_7		"/iconx - /icony - /iconz - set position of the selected map icon"
-#define CMD_INSTRUCTION_STRING_10_8		"/iconcolor - set color of the selected map icon"
-#define CMD_INSTRUCTION_STRING_10_9		"/iconstyle - set style of the selected map icon"
+#define CMD_INSTRUCTION_STRING_10_1		"/newicon - create map icon"
+#define CMD_INSTRUCTION_STRING_10_2		"/delicon - delete selected map icon"
+#define CMD_INSTRUCTION_STRING_10_3		"/cicon - copy selected map icon"
+#define CMD_INSTRUCTION_STRING_10_4		"/selicon [map icon ID] - select map icon by ID"
+#define CMD_INSTRUCTION_STRING_10_5		"/gotoicon - teleport to selected map icon"
+#define CMD_INSTRUCTION_STRING_10_6		"/geticon - teleport selected map icon to yourself"
+#define CMD_INSTRUCTION_STRING_10_7		"/iconx - /icony - /iconz - set position of selected map icon"
+#define CMD_INSTRUCTION_STRING_10_8		"/iconcolor - set color of selected map icon"
+#define CMD_INSTRUCTION_STRING_10_9		"/iconstyle - set style of selected map icon"
 #define CMD_INSTRUCTION_CAPTION_11		"Gangzones"
-#define CMD_INSTRUCTION_STRING_11_1		"/newzone - create a gangzone"
-#define CMD_INSTRUCTION_STRING_11_2		"/delzone - delete the selected gangzone"
-#define CMD_INSTRUCTION_STRING_11_3		"/czone - copy the selected gangzone"
-#define CMD_INSTRUCTION_STRING_11_4		"/selzone [gangzone ID] - select a gangzone by ID (size changing)"
-#define CMD_INSTRUCTION_STRING_11_5		"/holdzone [gangzone ID] - select a gangzone by ID (movement)"
-#define CMD_INSTRUCTION_STRING_11_6		"/gotozone - teleport to the selected gangzone"
-#define CMD_INSTRUCTION_STRING_11_7		"/getzone - teleport the selected gangzone to yourself"
-#define CMD_INSTRUCTION_STRING_11_8		"/zoneminx - /zoneminy - /zonemaxx - /zonemaxy - set position of the selected gangzone"
-#define CMD_INSTRUCTION_STRING_11_9		"/zonecolor - set color of the selected gangzone"
+#define CMD_INSTRUCTION_STRING_11_1		"/newzone - create gangzone"
+#define CMD_INSTRUCTION_STRING_11_2		"/delzone - delete selected gangzone"
+#define CMD_INSTRUCTION_STRING_11_3		"/czone - copy selected gangzone"
+#define CMD_INSTRUCTION_STRING_11_4		"/selzone [gangzone ID] - select gangzone by ID (size changing)"
+#define CMD_INSTRUCTION_STRING_11_5		"/holdzone [gangzone ID] - select gangzone by ID (movement)"
+#define CMD_INSTRUCTION_STRING_11_6		"/gotozone - teleport to selected gangzone"
+#define CMD_INSTRUCTION_STRING_11_7		"/getzone - teleport selected gangzone to yourself"
+#define CMD_INSTRUCTION_STRING_11_8		"/zoneminx - /zoneminy - /zonemaxx - /zonemaxy - set position of selected gangzone"
+#define CMD_INSTRUCTION_STRING_11_9		"/zonecolor - set color of selected gangzone"
 #define CMD_INSTRUCTION_CAPTION_12		"3D texts"
-#define CMD_INSTRUCTION_STRING_12_1		"/newlab - create a 3D text"
-#define CMD_INSTRUCTION_STRING_12_2		"/dellab - delete the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_3		"/clab - copy the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_4		"/calab - copy the selected attached 3D text"
-#define CMD_INSTRUCTION_STRING_12_5		"/sellab [label ID] - select a 3D text by ID"
-#define CMD_INSTRUCTION_STRING_12_6		"/gotolab - teleport to the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_7		"/getlab - teleport the selected 3D text to yourself"
+#define CMD_INSTRUCTION_STRING_12_1		"/newlab - create 3D text"
+#define CMD_INSTRUCTION_STRING_12_2		"/dellab - delete selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_3		"/clab - copy selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_4		"/calab - copy selected attached 3D text"
+#define CMD_INSTRUCTION_STRING_12_5		"/sellab [label ID] - select 3D text by ID"
+#define CMD_INSTRUCTION_STRING_12_6		"/gotolab - teleport to selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_7		"/getlab - teleport selected 3D text to yourself"
 #define CMD_INSTRUCTION_STRING_12_8		"/sticklab - stick selected 3D text to surface"
-#define CMD_INSTRUCTION_STRING_12_9		"/labtext - set text to the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_10	"/labcolor - set color of the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_11	"/lplattach [player ID] - attach the selected 3D text to player"
-#define CMD_INSTRUCTION_STRING_12_12	"/lvehattach [vehicle ID] - attach the selected 3D text to vehicle"
-#define CMD_INSTRUCTION_STRING_12_13	"/labx - /laby - /labz - set position of the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_14	"/labdd - set draw distance of the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_15	"/labvw - set virtual world of the selected 3D text"
-#define CMD_INSTRUCTION_STRING_12_16	"/lablos - set visibility through walls of the selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_9		"/labtext - set text to selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_10	"/labcolor - set color of selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_11	"/lplattach [player ID] - attach selected 3D text to player"
+#define CMD_INSTRUCTION_STRING_12_12	"/lvehattach [vehicle ID] - attach selected 3D text to vehicle"
+#define CMD_INSTRUCTION_STRING_12_13	"/labx - /laby - /labz - set position of selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_14	"/labdd - set draw distance of selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_15	"/labvw - set virtual world of selected 3D text"
+#define CMD_INSTRUCTION_STRING_12_16	"/lablos - set visibility through walls of selected 3D text"
 #define CMD_INSTRUCTION_CAPTION_13		"Moving around the map"
 #define CMD_INSTRUCTION_STRING_13_1		"/setpos - teleport to the coordinates"
 #define CMD_INSTRUCTION_STRING_13_2		"/setint - interior setting by ID"
@@ -11541,7 +11543,7 @@ public OnPlayerUpdate(playerid)
 			}
 		}
 		else if(CreatorInfo[playerid][ucSelectedVeh] != INVALID_VEHICLE_ID)
-		{	
+		{
 			GetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
 			GetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
 			GetSelectedVehicleNextPos(keys, lr, ud, GetPlayerCameraFacingAngle(playerid), PX, PY, PZ, VZ);
@@ -11554,7 +11556,6 @@ public OnPlayerUpdate(playerid)
 				SetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
 				SetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
 			}
-			
 			if(INTERFACE_VISIBILITY)
 			{
 				if(keys & KEY_FIRE) format(strtmp, sizeof strtmp, "Vehicle %d (id %d)~n~z: %.4f", VehiclesInfo[CreatorInfo[playerid][ucSelectedVeh]][vModelid], CreatorInfo[playerid][ucSelectedVeh], VZ);
@@ -12175,7 +12176,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 							else
 							{
 								static strtmp[MAX_MAPNAME_LENGTH];
-								strcpy(strtmp, MapName, sizeof strtmp);
+								strcpy2(strtmp, MapName, sizeof strtmp);
 								if(strfindchar(MapName, '.') == -1) strcat(strtmp, ".txt");
 								if(SaveCreatorMap(strtmp))
 								{
@@ -12232,9 +12233,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(response)
 				{
+					if(!strcmp(inputtext, ENTER_MAP_NAME)) return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP, .versatile = true);
 					static strtmp[MAX_MAPNAME_LENGTH];
-					strcpy(strtmp, inputtext, sizeof strtmp);
-					if(strfindchar(inputtext, '.') == -1) strcat(strtmp, ".txt");
+					strcpy2(strtmp, inputtext, sizeof strtmp);
+					if(strfindchar(strtmp, '.') == -1) strcat(strtmp, ".txt");
 					new loaded = LoadCreatorMap(strtmp);
 					if(loaded)
 					{
@@ -12245,7 +12247,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						format(strtmp2, sizeof strtmp2, MAP_OPENED, pname, strtmp);
 						SendMessageToCreators(DEFAULT_COLOR, strtmp2);
 						if(loaded == 2) SendMessageToCreators(DEFAULT_COLOR, REMOVED_OBJECTS_WARNING);
-						strcpy(MapName, inputtext, sizeof MapName);
+						strcpy2(MapName, inputtext, sizeof MapName);
 						#if defined Streamer_Update
 							Streamer_Update(playerid);
 						#endif
@@ -12253,10 +12255,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					else
 					{
 						SendClientMessage(playerid, DEFAULT_COLOR, FILE_NOT_FOUND_ERROR);
-						return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP);
+						if(listitem < 0) return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP, .versatile = true);
+						else
+						{
+							DeleteCreatorMap(strtmp);
+							return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP);
+						}
 					}
 				}
-				else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				else
+				{
+					if(listitem < 0 && IsMapListFileCreated("ucmaps.lst")) ShowCreatorDialog(playerid, DIALOG_OPEN_MAP);
+					else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				}
 				return 1;
 			}
 			case DIALOG_OPEN_MAP_OVER_WARN:
@@ -12269,9 +12280,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(response)
 				{
+					if(!strcmp(inputtext, ENTER_MAP_NAME)) return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP_OVER, .versatile = true);
 					static strtmp[MAX_MAPNAME_LENGTH];
-					strcpy(strtmp, inputtext, sizeof strtmp);
-					if(strfindchar(inputtext, '.') == -1) strcat(strtmp, ".txt");
+					strcpy2(strtmp, inputtext, sizeof strtmp);
+					if(strfindchar(strtmp, '.') == -1) strcat(strtmp, ".txt");
 					new loaded = LoadCreatorMap(strtmp, false);
 					if(loaded)
 					{
@@ -12288,10 +12300,19 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					else
 					{
 						SendClientMessage(playerid, DEFAULT_COLOR, FILE_NOT_FOUND_ERROR);
-						return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP_OVER);
+						if(listitem < 0) return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP_OVER, .versatile = true);
+						else
+						{
+							DeleteCreatorMap(strtmp);
+							return ShowCreatorDialog(playerid, DIALOG_OPEN_MAP_OVER);
+						}
 					}
 				}
-				else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				else
+				{
+					if(listitem < 0 && IsMapListFileCreated("ucmaps.lst")) ShowCreatorDialog(playerid, DIALOG_OPEN_MAP_OVER);
+					else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				}
 				return 1;
 			}
 			case DIALOG_SAVE_MAP_AS:
@@ -12302,17 +12323,17 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					strfind(inputtext, "\\") != -1 || strfindchar(inputtext, ':') != -1 ||
 					strfindchar(inputtext, '*') != -1 || strfindchar(inputtext, '?') != -1 ||
 					strfindchar(inputtext, '\"') != -1 || strfindchar(inputtext, '<') != -1 ||
-					strfindchar(inputtext, '>') != -1 || strfindchar(inputtext, '|') != -1) return ShowCreatorDialog(playerid, DIALOG_SAVE_MAP_AS, INCORRECT_FILE_NAME_ERROR"\n\n"ENTER_MAP_NAME_FOR_SAVE);
+					strfindchar(inputtext, '>') != -1 || strfindchar(inputtext, '|') != -1) return ShowCreatorDialog(playerid, DIALOG_SAVE_MAP_AS, INCORRECT_FILE_NAME_ERROR"\n\n"ENTER_MAP_NAME_TO_SAVE);
 					static strtmp[MAX_MAPNAME_LENGTH];
-					strcpy(strtmp, inputtext, sizeof strtmp);
-					if(strfindchar(inputtext, '.') == -1) strcat(strtmp, ".txt");
+					strcpy2(strtmp, inputtext, sizeof strtmp);
+					if(strfindchar(strtmp, '.') == -1) strcat(strtmp, ".txt");
 					if(SaveCreatorMap(strtmp))
 					{
 						static strtmp2[145], pname[MAX_PLAYER_NAME + 1];
 						GetPlayerName(playerid, pname, sizeof pname);
 						format(strtmp2, sizeof strtmp2, MAP_SAVED, pname, strtmp);
 						SendMessageToCreators(DEFAULT_COLOR, strtmp2);
-						strcpy(MapName, inputtext, sizeof MapName);
+						strcpy2(MapName, inputtext, sizeof MapName);
 					}
 					else SendClientMessage(playerid, DEFAULT_COLOR, SAVE_MAP_ERROR);
 				}
@@ -12323,9 +12344,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(response)
 				{
+					if(!strcmp(inputtext, ENTER_MAP_NAME)) return ShowCreatorDialog(playerid, DIALOG_DELETE_MAP, .versatile = true);
 					static strtmp[MAX_MAPNAME_LENGTH];
-					strcpy(strtmp, inputtext, sizeof strtmp);
-					if(strfindchar(inputtext, '.') == -1) strcat(strtmp, ".txt");
+					strcpy2(strtmp, inputtext, sizeof strtmp);
+					if(strfindchar(strtmp, '.') == -1) strcat(strtmp, ".txt");
 					if(DeleteCreatorMap(strtmp))
 					{
 						static strtmp2[145], pname[MAX_PLAYER_NAME + 1];
@@ -12336,10 +12358,15 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					else
 					{
 						SendClientMessage(playerid, DEFAULT_COLOR, FILE_NOT_FOUND_ERROR);
-						ShowCreatorDialog(playerid, DIALOG_DELETE_MAP);
+						if(listitem < 0) return ShowCreatorDialog(playerid, DIALOG_DELETE_MAP, .versatile = true);
+						return ShowCreatorDialog(playerid, DIALOG_DELETE_MAP);
 					}
 				}
-				else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				else
+				{
+					if(listitem < 0 && IsMapListFileCreated("ucmaps.lst")) ShowCreatorDialog(playerid, DIALOG_DELETE_MAP);
+					else if(!CreatorInfo[playerid][ucCalledFromCmd]) ShowCreatorDialog(playerid, DIALOG_CHOOSE_MAP);
+				}
 				return 1;
 			}
 			case DIALOG_MAIN:
@@ -13050,6 +13077,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedObj] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Object %d] %0.4f, %0.4f, %0.4f", ObjectsInfo[clickedid][oModelid], ObjectsInfo[clickedid][oX], ObjectsInfo[clickedid][oY], ObjectsInfo[clickedid][oZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -14885,6 +14919,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedVeh] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Vehicle %d] %0.4f, %0.4f, %0.4f", VehiclesInfo[clickedid][vModelid], VehiclesInfo[clickedid][vX], VehiclesInfo[clickedid][vY], VehiclesInfo[clickedid][vZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -15339,6 +15380,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedAct] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Actor %d] %0.4f, %0.4f, %0.4f", ActorsInfo[clickedid][aModelid], ActorsInfo[clickedid][aX], ActorsInfo[clickedid][aY], ActorsInfo[clickedid][aZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -15686,6 +15734,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedPick] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Pickup %d] %0.4f, %0.4f, %0.4f", PickupsInfo[clickedid][pModelid], PickupsInfo[clickedid][pX], PickupsInfo[clickedid][pY], PickupsInfo[clickedid][pZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -15950,6 +16005,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedCp] = CreatorInfo[playerid][ucClickedCp];
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Checkpoint] %0.4f, %0.4f, %0.4f", CheckpointInfo[cpX], CheckpointInfo[cpY], CheckpointInfo[cpZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -16091,6 +16153,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedRcp] = CreatorInfo[playerid][ucClickedRcp];
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Race checkpoint] %0.4f, %0.4f, %0.4f", RaceCpInfo[rcpX], RaceCpInfo[rcpY], RaceCpInfo[rcpZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -16368,6 +16437,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedIco] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Map icon %d] %0.4f, %0.4f, %0.4f", IconsInfo[clickedid][iType], IconsInfo[clickedid][iX], IconsInfo[clickedid][iY], IconsInfo[clickedid][iZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -16659,6 +16735,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedGzn] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Gangzone] %0.4f, %0.4f, %0.4f, %0.4f", ZonesInfo[clickedid][gMinX], ZonesInfo[clickedid][gMinY], ZonesInfo[clickedid][gMaxX], ZonesInfo[clickedid][gMaxY]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -16667,6 +16750,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucHoldingGzn] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "[Gangzone] %0.4f, %0.4f, %0.4f, %0.4f", ZonesInfo[clickedid][gMinX], ZonesInfo[clickedid][gMinY], ZonesInfo[clickedid][gMaxX], ZonesInfo[clickedid][gMaxY]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 2:
 							{
@@ -16960,6 +17050,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 								CreatorInfo[playerid][ucCopyDefObj] = false;
 								CreatorInfo[playerid][ucDelDefObj] = false;
 								CreatorInfo[playerid][ucSelectedLab] = clickedid;
+								#if defined CREATOR_DEBUG
+									if(CreatorInfo[playerid][ucCalledFromList])
+									{
+										format(strtmp, sizeof strtmp, "{ffffff}[3D text '%s{ffffff}'] %0.4f, %0.4f, %0.4f", LabelsInfo[clickedid][lText], LabelsInfo[clickedid][lX], LabelsInfo[clickedid][lY], LabelsInfo[clickedid][lZ]);
+										SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+									}
+								#endif
 							}
 							case 1:
 							{
@@ -20039,7 +20136,7 @@ fpublic cmd_loadmap(playerid, const params[])
 	else
 	{
 		static strtmp[MAX_MAPNAME_LENGTH];
-		strcpy(strtmp, params, sizeof strtmp);
+		strcpy2(strtmp, params, sizeof strtmp);
 		if(strfindchar(params, '.') == -1) strcat(strtmp, ".txt");
 		new loaded = LoadCreatorMap(strtmp);
 		if(loaded)
@@ -20051,7 +20148,7 @@ fpublic cmd_loadmap(playerid, const params[])
 			format(strtmp2, sizeof strtmp2, MAP_OPENED, pname, strtmp);
 			SendMessageToCreators(DEFAULT_COLOR, strtmp2);
 			if(loaded == 2) SendMessageToCreators(DEFAULT_COLOR, REMOVED_OBJECTS_WARNING);
-			strcpy(MapName, params, sizeof MapName);
+			strcpy2(MapName, params, sizeof MapName);
 			#if defined Streamer_Update
 				Streamer_Update(playerid);
 			#endif
@@ -20075,7 +20172,7 @@ fpublic cmd_loadover(playerid, const params[])
 	else
 	{
 		static strtmp[MAX_MAPNAME_LENGTH];
-		strcpy(strtmp, params, sizeof strtmp);
+		strcpy2(strtmp, params, sizeof strtmp);
 		if(strfindchar(params, '.') == -1) strcat(strtmp, ".txt");
 		new loaded = LoadCreatorMap(strtmp, false);
 		if(loaded)
@@ -20110,7 +20207,7 @@ fpublic cmd_renamemap(playerid, const params[])
 	if(!strcmp(MapName, "uc_blank")) format(strtmp, sizeof strtmp, MAP_RENAMED_BLANK, pname, params);
 	else format(strtmp, sizeof strtmp, MAP_RENAMED, pname, MapName, params);
 	SendMessageToCreators(DEFAULT_COLOR, strtmp);
-	strcpy(MapName, params, sizeof MapName);
+	strcpy2(MapName, params, sizeof MapName);
 	return 1;
 }
 
@@ -20128,7 +20225,7 @@ fpublic cmd_savemap(playerid, const params[])
 		else
 		{
 			static strtmp[MAX_MAPNAME_LENGTH];
-			strcpy(strtmp, MapName, sizeof strtmp);
+			strcpy2(strtmp, MapName, sizeof strtmp);
 			if(strfindchar(MapName, '.') == -1) strcat(strtmp, ".txt");
 			if(SaveCreatorMap(strtmp))
 			{
@@ -20148,7 +20245,7 @@ fpublic cmd_savemap(playerid, const params[])
 		strfindchar(params, '<') != -1 || strfindchar(params, '>') != -1 ||
 		strfindchar(params, '|') != -1) return SendClientMessage(playerid, DEFAULT_COLOR, INCORRECT_FILE_NAME_ERROR);
 		static strtmp[MAX_MAPNAME_LENGTH];
-		strcpy(strtmp, params, sizeof strtmp);
+		strcpy2(strtmp, params, sizeof strtmp);
 		if(strfindchar(params, '.') == -1) strcat(strtmp, ".txt");
 		if(SaveCreatorMap(strtmp))
 		{
@@ -20156,7 +20253,7 @@ fpublic cmd_savemap(playerid, const params[])
 			GetPlayerName(playerid, pname, sizeof pname);
 			format(strtmp2, sizeof strtmp2, MAP_SAVED, pname, strtmp);
 			SendMessageToCreators(DEFAULT_COLOR, strtmp2);
-			strcpy(MapName, params, sizeof MapName);
+			strcpy2(MapName, params, sizeof MapName);
 		}
 		else SendClientMessage(playerid, DEFAULT_COLOR, SAVE_MAP_ERROR);
 	}
@@ -20176,7 +20273,7 @@ fpublic cmd_delmap(playerid, const params[])
 	else
 	{
 		static strtmp[MAX_MAPNAME_LENGTH];
-		strcpy(strtmp, params, sizeof strtmp);
+		strcpy2(strtmp, params, sizeof strtmp);
 		if(strfindchar(params, '.') == -1) strcat(strtmp, ".txt");
 		if(DeleteCreatorMap(strtmp))
 		{
@@ -20521,6 +20618,11 @@ fpublic cmd_selobj(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedObj] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Object %d] %0.4f, %0.4f, %0.4f", ObjectsInfo[selectedid][oModelid], ObjectsInfo[selectedid][oX], ObjectsInfo[selectedid][oY], ObjectsInfo[selectedid][oZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -22192,6 +22294,11 @@ fpublic cmd_selveh(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedVeh] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Vehicle %d] %0.4f, %0.4f, %0.4f", VehiclesInfo[selectedid][vModelid], VehiclesInfo[selectedid][vX], VehiclesInfo[selectedid][vY], VehiclesInfo[selectedid][vZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -22961,6 +23068,11 @@ fpublic cmd_selact(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedAct] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Actor %d] %0.4f, %0.4f, %0.4f", ActorsInfo[selectedid][aModelid], ActorsInfo[selectedid][aX], ActorsInfo[selectedid][aY], ActorsInfo[selectedid][aZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -23618,6 +23730,11 @@ fpublic cmd_selpick(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedPick] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Pickup %d] %0.4f, %0.4f, %0.4f", PickupsInfo[selectedid][pModelid], PickupsInfo[selectedid][pX], PickupsInfo[selectedid][pY], PickupsInfo[selectedid][pZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -23982,6 +24099,11 @@ fpublic cmd_selcp(playerid, const params[])
 		CreatorInfo[playerid][ucCopyDefObj] = false;
 		CreatorInfo[playerid][ucDelDefObj] = false;
 		CreatorInfo[playerid][ucSelectedCp] = 1;
+		#if defined CREATOR_DEBUG
+			static strtmp[145];
+			format(strtmp, sizeof strtmp, "[Checkpoint] %0.4f, %0.4f, %0.4f", CheckpointInfo[cpX], CheckpointInfo[cpY], CheckpointInfo[cpZ]);
+			SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+		#endif
 	}
 	else SendClientMessage(playerid, DEFAULT_COLOR, NO_CPS_CREATED_ERROR);
 	return 1;
@@ -24199,6 +24321,11 @@ fpublic cmd_selrcp(playerid, const params[])
 		CreatorInfo[playerid][ucCopyDefObj] = false;
 		CreatorInfo[playerid][ucDelDefObj] = false;
 		CreatorInfo[playerid][ucSelectedRcp] = 1;
+		#if defined CREATOR_DEBUG
+			static strtmp[145];
+			format(strtmp, sizeof strtmp, "[Race checkpoint] %0.4f, %0.4f, %0.4f", RaceCpInfo[rcpX], RaceCpInfo[rcpY], RaceCpInfo[rcpZ]);
+			SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+		#endif
 	}
 	else SendClientMessage(playerid, DEFAULT_COLOR, NO_RCPS_CREATED_ERROR);
 	return 1;
@@ -24699,6 +24826,11 @@ fpublic cmd_selicon(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedIco] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Map icon %d] %0.4f, %0.4f, %0.4f", IconsInfo[selectedid][iType], IconsInfo[selectedid][iX], IconsInfo[selectedid][iY], IconsInfo[selectedid][iZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -25045,6 +25177,11 @@ fpublic cmd_selzone(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedGzn] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Gangzone] %0.4f, %0.4f, %0.4f, %0.4f", ZonesInfo[selectedid][gMinX], ZonesInfo[selectedid][gMinY], ZonesInfo[selectedid][gMaxX], ZonesInfo[selectedid][gMaxY]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -25062,6 +25199,11 @@ fpublic cmd_holdzone(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucHoldingGzn] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "[Gangzone] %0.4f, %0.4f, %0.4f, %0.4f", ZonesInfo[selectedid][gMinX], ZonesInfo[selectedid][gMinY], ZonesInfo[selectedid][gMaxX], ZonesInfo[selectedid][gMaxY]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -25561,6 +25703,11 @@ fpublic cmd_sellab(playerid, const params[])
 	CreatorInfo[playerid][ucCopyDefObj] = false;
 	CreatorInfo[playerid][ucDelDefObj] = false;
 	CreatorInfo[playerid][ucSelectedLab] = selectedid;
+	#if defined CREATOR_DEBUG
+		static strtmp[145];
+		format(strtmp, sizeof strtmp, "{ffffff}[3D text '%s{ffffff}'] %0.4f, %0.4f, %0.4f", LabelsInfo[selectedid][lText], LabelsInfo[selectedid][lX], LabelsInfo[selectedid][lY], LabelsInfo[selectedid][lZ]);
+		SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
+	#endif
 	return 1;
 }
 
@@ -26795,7 +26942,7 @@ fpublic CreatorSpawn(playerid)
 	return 1;
 }
 
-ShowCreatorDialog(playerid, dialogid, text[] = "")
+ShowCreatorDialog(playerid, dialogid, text[] = "", versatile = false)
 {
 	switch(dialogid)
 	{
@@ -26816,22 +26963,34 @@ ShowCreatorDialog(playerid, dialogid, text[] = "")
 		}
 		case DIALOG_OPEN_MAP:
 		{
-			if(!isnull(text)) ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, text, OK_BUTTON, BACK_BUTTON);
-			else if(fexist("ucmaps.lst"))
+			if(!isnull(text))
+			{
+				if(versatile || !IsMapListFileCreated("ucmaps.lst")) ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, text, OK_BUTTON, BACK_BUTTON);
+				else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_LIST, OPEN_MAP, text, OK_BUTTON, BACK_BUTTON);
+			}
+			else if(IsMapListFileCreated("ucmaps.lst"))
 			{
 				new File:pfile;
 				if((pfile = fopen("ucmaps.lst")))
 				{
-					static strtmp[256], strtmp2[MAX_MAPNAME_LENGTH];
+					static strtmp[512], strtmp2[MAX_MAPNAME_LENGTH];
 					strtmp[0] = EOS;
 					strtmp2[0] = EOS;
-					while(fread(pfile, strtmp2)) strcat(strtmp, strtmp2);
-					strcat(strtmp, "\n"ENTER_MAP_NAME_FOR_OPEN);
-					ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
+					if(!versatile) strcat(strtmp, ENTER_MAP_NAME"\n");
+					while(fread(pfile, strtmp2))
+					{
+						if(!IsEmptyString(strtmp2)) strcat(strtmp, strtmp2);
+					}
+					if(versatile)
+					{
+						strcat(strtmp, "\n"ENTER_MAP_NAME_TO_OPEN);
+						ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
+					}
+					else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_LIST, OPEN_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
 					fclose(pfile);
 				}
 			}
-			else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, ENTER_MAP_NAME_FOR_OPEN, OK_BUTTON, BACK_BUTTON);
+			else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP, DIALOG_STYLE_INPUT, OPEN_MAP, ENTER_MAP_NAME_TO_OPEN, OK_BUTTON, BACK_BUTTON);
 		}
 		case DIALOG_OPEN_MAP_OVER_WARN:
 		{
@@ -26840,46 +26999,70 @@ ShowCreatorDialog(playerid, dialogid, text[] = "")
 		}
 		case DIALOG_OPEN_MAP_OVER:
 		{
-			if(!isnull(text)) ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, text, OK_BUTTON, BACK_BUTTON);
-			else if(fexist("ucmaps.lst"))
+			if(!isnull(text))
+			{
+				if(versatile || !IsMapListFileCreated("ucmaps.lst")) ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, text, OK_BUTTON, BACK_BUTTON);
+				else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_LIST, OPEN_MAP_OVER, text, OK_BUTTON, BACK_BUTTON);
+			}
+			else if(IsMapListFileCreated("ucmaps.lst"))
 			{
 				new File:pfile;
 				if((pfile = fopen("ucmaps.lst")))
 				{
-					static strtmp[256], strtmp2[MAX_MAPNAME_LENGTH];
+					static strtmp[512], strtmp2[MAX_MAPNAME_LENGTH];
 					strtmp[0] = EOS;
 					strtmp2[0] = EOS;
-					while(fread(pfile, strtmp2)) strcat(strtmp, strtmp2);
-					strcat(strtmp, "\n"ENTER_MAP_NAME_FOR_OPEN);
-					ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, strtmp, OK_BUTTON, BACK_BUTTON);
+					if(!versatile) strcat(strtmp, ENTER_MAP_NAME"\n");
+					while(fread(pfile, strtmp2))
+					{
+						if(!IsEmptyString(strtmp2)) strcat(strtmp, strtmp2);
+					}
+					if(versatile)
+					{
+						strcat(strtmp, "\n"ENTER_MAP_NAME_TO_OPEN);
+						ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, strtmp, OK_BUTTON, BACK_BUTTON);
+					}
+					else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_LIST, OPEN_MAP_OVER, strtmp, OK_BUTTON, BACK_BUTTON);
 					fclose(pfile);
 				}
 			}
-			else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, ENTER_MAP_NAME_FOR_OPEN, OK_BUTTON, BACK_BUTTON);
+			else ShowPlayerDialog(playerid, DIALOG_OPEN_MAP_OVER, DIALOG_STYLE_INPUT, OPEN_MAP_OVER, ENTER_MAP_NAME_TO_OPEN, OK_BUTTON, BACK_BUTTON);
 		}
 		case DIALOG_SAVE_MAP_AS:
 		{
 			if(!isnull(text)) ShowPlayerDialog(playerid, DIALOG_SAVE_MAP_AS, DIALOG_STYLE_INPUT, SAVE_MAP_AS, text, OK_BUTTON, BACK_BUTTON);
-			else ShowPlayerDialog(playerid, DIALOG_SAVE_MAP_AS, DIALOG_STYLE_INPUT, SAVE_MAP_AS, ENTER_MAP_NAME_FOR_SAVE, OK_BUTTON, BACK_BUTTON);
+			else ShowPlayerDialog(playerid, DIALOG_SAVE_MAP_AS, DIALOG_STYLE_INPUT, SAVE_MAP_AS, ENTER_MAP_NAME_TO_SAVE, OK_BUTTON, BACK_BUTTON);
 		}
 		case DIALOG_DELETE_MAP:
 		{
-			if(!isnull(text)) ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, text, OK_BUTTON, BACK_BUTTON);
-			else if(fexist("ucmaps.lst"))
+			if(!isnull(text))
+			{
+				if(versatile || !IsMapListFileCreated("ucmaps.lst")) ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, text, OK_BUTTON, BACK_BUTTON);
+				else ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_LIST, DELETE_MAP, text, OK_BUTTON, BACK_BUTTON);
+			}
+			else if(IsMapListFileCreated("ucmaps.lst"))
 			{
 				new File:pfile;
 				if((pfile = fopen("ucmaps.lst")))
 				{
-					static strtmp[256], strtmp2[MAX_MAPNAME_LENGTH];
+					static strtmp[512], strtmp2[MAX_MAPNAME_LENGTH];
 					strtmp[0] = EOS;
 					strtmp2[0] = EOS;
-					while(fread(pfile, strtmp2)) strcat(strtmp, strtmp2);
-					strcat(strtmp, "\n"ENTER_MAP_NAME_FOR_DELETE);
-					ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
+					if(!versatile) strcat(strtmp, ENTER_MAP_NAME"\n");
+					while(fread(pfile, strtmp2))
+					{
+						if(!IsEmptyString(strtmp2)) strcat(strtmp, strtmp2);
+					}
+					if(versatile)
+					{
+						strcat(strtmp, "\n"ENTER_MAP_NAME_TO_DELETE);
+						ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
+					}
+					else ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_LIST, DELETE_MAP, strtmp, OK_BUTTON, BACK_BUTTON);
 					fclose(pfile);
 				}
 			}
-			else ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, ENTER_MAP_NAME_FOR_DELETE, OK_BUTTON, BACK_BUTTON);
+			else ShowPlayerDialog(playerid, DIALOG_DELETE_MAP, DIALOG_STYLE_INPUT, DELETE_MAP, ENTER_MAP_NAME_TO_DELETE, OK_BUTTON, BACK_BUTTON);
 		}
 		case DIALOG_MAIN:
 		{
@@ -30759,6 +30942,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 				found[10][132], i, pos, pos2, pos3,
 				oc, vc, ac, pc, lc, gc, cc, rcc, ic, rbc;
 			static strtmp[320], strtmp2[MAX_PREFIX_LENGTH];
+			#if defined CREATOR_DEBUG
+				static logtmp[320];
+			#endif
 			strtmp[0] = EOS;
 			while(fread(pfile, strtmp))
 			{
@@ -30775,10 +30961,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicObject
-							printf("CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#else
-							printf("CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(oc < 1 || oc == INVALID_OBJECT_ID) oc = MAX_UC_OBJECTS;
 					else if(strtmp2[0])
@@ -30802,10 +30990,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicObject
-							printf("CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#else
-							printf("CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(oc < 1 || oc == INVALID_OBJECT_ID) oc = MAX_UC_OBJECTS;
 					else if(strtmp2[0])
@@ -30829,10 +31019,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicObject
-							printf("CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateDynamicObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#else
-							printf("CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
+							format(logtmp, sizeof logtmp, "CreateObject(%d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(oc < 1 || oc == INVALID_OBJECT_ID) oc = MAX_UC_OBJECTS;
 					else if(strtmp2[0])
@@ -30862,10 +31054,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined SetDynamicObjectMaterial
-							printf("SetDynamicObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
+							format(logtmp, sizeof logtmp, "SetDynamicObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
 						#else
-							printf("SetObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
+							format(logtmp, sizeof logtmp, "SetObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "SetDynamicObjectMaterial(", true)) != -1 && 0 < oc < MAX_UC_OBJECTS)
@@ -30887,10 +31081,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined SetDynamicObjectMaterial
-							printf("SetDynamicObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
+							format(logtmp, sizeof logtmp, "SetDynamicObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
 						#else
-							printf("SetObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
+							format(logtmp, sizeof logtmp, "SetObjectMaterial(%d, %d, %d, \"%s\", \"%s\", 0x%08x);", oc, strval(found[1]), strval(found[2]), found[3], found[4], pos);
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "SetObjectMaterialText(", true)) != -1 && 0 < oc < MAX_UC_OBJECTS)
@@ -30923,10 +31119,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined SetDynamicObjectMaterialText
-							printf("SetDynamicObjectMaterialText(%d, %d, \"%s\", %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, strval(found[2]), found[1], pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
+							format(logtmp, sizeof logtmp, "SetDynamicObjectMaterialText(%d, %d, \"%s\", %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, strval(found[2]), found[1], pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
 						#else
-							printf("SetObjectMaterialText(%d, \"%s\", %d, %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, found[1], strval(found[2]), pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
+							format(logtmp, sizeof logtmp, "SetObjectMaterialText(%d, \"%s\", %d, %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, found[1], strval(found[2]), pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "SetDynamicObjectMaterialText(", true)) != -1 && 0 < oc < MAX_UC_OBJECTS)
@@ -30959,10 +31157,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined SetDynamicObjectMaterialText
-							printf("SetDynamicObjectMaterialText(%d, %d, \"%s\", %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, strval(found[1]), found[2], pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
+							format(logtmp, sizeof logtmp, "SetDynamicObjectMaterialText(%d, %d, \"%s\", %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, strval(found[1]), found[2], pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
 						#else
-							printf("SetObjectMaterialText(%d, \"%s\", %d, %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, found[2], strval(found[1]), pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
+							format(logtmp, sizeof logtmp, "SetObjectMaterialText(%d, \"%s\", %d, %d, \"%s\", %d, %d, 0x%08x, 0x%08x, %d);", oc, found[2], strval(found[1]), pos3, found[4], found[5][0], found[6][0], pos, pos2, strval(found[9]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AttachObjectToPlayer(", true)) != -1 && 0 < oc < MAX_UC_OBJECTS)
@@ -30978,10 +31178,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToPlayer
-							printf("AttachDynamicObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#else
-							printf("AttachObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AttachDynamicObjectToPlayer(", true)) != -1 && 0 < oc < MAX_UC_OBJECTS)
@@ -30997,10 +31199,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToPlayer
-							printf("AttachDynamicObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#else
-							printf("AttachObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachObjectToPlayer(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", oc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AttachObjectToObject(", true)) != -1)
@@ -31019,10 +31223,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToObject
-							printf("AttachDynamicObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
 						#else
-							printf("AttachObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
+							format(logtmp, sizeof logtmp, "AttachObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AttachDynamicObjectToObject(", true)) != -1)
@@ -31041,10 +31247,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToObject
-							printf("AttachDynamicObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
 						#else
-							printf("AttachObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
+							format(logtmp, sizeof logtmp, "AttachObjectToObject(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %d);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), found[8][0]);
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "RemoveBuildingForPlayer(", true)) != -1 && rbc < MAX_UC_REMOVED_OBJECTS)
@@ -31053,7 +31261,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					rbc = RemoveBuilding(strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]));
 					#if defined CREATOR_DEBUG
-						printf("RemoveBuildingForPlayer(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]));
+						format(logtmp, sizeof logtmp, "RemoveBuildingForPlayer(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateVehicle(", true)) != -1 && vc < MAX_VEHICLES)
@@ -31062,9 +31272,14 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					if(i > 0) strmid(strtmp2, strtmp, 0, i - 1);
 					strdel(strtmp, 0, i + 14);
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
-					vc = CreateVehicle(strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+					pos = strval(found[0]);
+					if(IsATrainPart(pos)) vc = AddStaticVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+					else vc = CreateVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
 					#if defined CREATOR_DEBUG
-						printf("CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+						if(IsATrainPart(pos)) format(logtmp, sizeof logtmp, "AddStaticVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+						else format(logtmp, sizeof logtmp, "CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(vc == INVALID_VEHICLE_ID) vc = MAX_VEHICLES;
 					else if(strtmp2[0])
@@ -31081,9 +31296,14 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					if(i > 0) strmid(strtmp2, strtmp, 0, i - 1);
 					strdel(strtmp, 0, i + 17);
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
-					vc = CreateVehicle(strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+					pos = strval(found[0]);
+					if(IsATrainPart(pos)) vc = AddStaticVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+					else vc = CreateVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), -1);
 					#if defined CREATOR_DEBUG
-						printf("CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+						if(IsATrainPart(pos)) format(logtmp, sizeof logtmp, "AddStaticVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+						else format(logtmp, sizeof logtmp, "CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, -1);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(vc == INVALID_VEHICLE_ID) vc = MAX_VEHICLES;
 					else if(strtmp2[0])
@@ -31100,9 +31320,14 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					if(i > 0) strmid(strtmp2, strtmp, 0, i - 1);
 					strdel(strtmp, 0, i + 19);
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
-					vc = CreateVehicle(strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+					pos = strval(found[0]);
+					if(IsATrainPart(pos)) vc = AddStaticVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+					else vc = CreateVehicle(pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
 					#if defined CREATOR_DEBUG
-						printf("CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+						if(IsATrainPart(pos)) format(logtmp, sizeof logtmp, "AddStaticVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]));
+						else format(logtmp, sizeof logtmp, "CreateVehicle(%d, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d, %d);", pos, floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(vc == INVALID_VEHICLE_ID) vc = MAX_VEHICLES;
 					else if(strtmp2[0])
@@ -31127,10 +31352,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToVehicle
-							printf("AttachDynamicObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#else
-							printf("AttachObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AttachDynamicObjectToVehicle(", true)) != -1)
@@ -31147,10 +31374,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined AttachDynamicObjectToVehicle
-							printf("AttachDynamicObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachDynamicObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#else
-							printf("AttachObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+							format(logtmp, sizeof logtmp, "AttachObjectToVehicle(%d, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "AddVehicleComponent(", true)) != -1 && 0 < vc < MAX_VEHICLES)
@@ -31159,7 +31388,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					AddVehicleComponent(vc, strval(found[1]));
 					#if defined CREATOR_DEBUG
-						printf("AddVehicleComponent(%d, %d);", vc, strval(found[1]));
+						format(logtmp, sizeof logtmp, "AddVehicleComponent(%d, %d);", vc, strval(found[1]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "ChangeVehiclePaintjob(", true)) != -1 && 0 < vc < MAX_VEHICLES)
@@ -31168,7 +31399,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					ChangeVehiclePaintjob(vc, strval(found[1]));
 					#if defined CREATOR_DEBUG
-						printf("ChangeVehiclePaintjob(%d, %d);", vc, strval(found[1]));
+						format(logtmp, sizeof logtmp, "ChangeVehiclePaintjob(%d, %d);", vc, strval(found[1]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateActor(", true)) != -1 && ac < MAX_UC_ACTORS)
@@ -31182,10 +31415,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicActor
-							printf("CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#else
-							printf("CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicActor
 						if(ac == INVALID_STREAMER_ID) ac = MAX_UC_ACTORS;
@@ -31204,10 +31439,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicActor
-							printf("CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#else
-							printf("CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicActor
 						if(ac == INVALID_STREAMER_ID) ac = MAX_UC_ACTORS;
@@ -31226,10 +31463,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicActor
-							printf("CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateDynamicActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#else
-							printf("CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "CreateActor(%d, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicActor
 						if(ac == INVALID_STREAMER_ID) ac = MAX_UC_ACTORS;
@@ -31253,10 +31492,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					SetTimerEx("ReApplyActorAnimation", 800, 0, "i", ac);
 					#if defined CREATOR_DEBUG
 						#if defined ApplyDynamicActorAnimation
-							printf("ApplyDynamicActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
+							format(logtmp, sizeof logtmp, "ApplyDynamicActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
 						#else
-							printf("ApplyActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
+							format(logtmp, sizeof logtmp, "ApplyActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "ApplyDynamicActorAnimation(", true)) != -1 && -1 < ac < MAX_UC_ACTORS)
@@ -31275,10 +31516,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					SetTimerEx("ReApplyActorAnimation", 800, 0, "i", ac);
 					#if defined CREATOR_DEBUG
 						#if defined ApplyDynamicActorAnimation
-							printf("ApplyDynamicActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
+							format(logtmp, sizeof logtmp, "ApplyDynamicActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
 						#else
-							printf("ApplyActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
+							format(logtmp, sizeof logtmp, "ApplyActorAnimation(%d, \"%s\", \"%s\", %.1f, %d, %d, %d, %d, %d);", ac, found[1], found[2], floatstr(found[3]), strval(found[4]), strval(found[5]), strval(found[6]), strval(found[7]), strval(found[8]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreatePickup(", true)) != -1 && 0 <= pc < MAX_UC_PICKUPS)
@@ -31292,10 +31535,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicPickup
-							printf("CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
 						#else
-							printf("CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicPickup
 						if(pc == INVALID_STREAMER_ID) pc = MAX_UC_PICKUPS;
@@ -31314,10 +31559,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicPickup
-							printf("CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
 						#else
-							printf("CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicPickup
 						if(pc == INVALID_STREAMER_ID) pc = MAX_UC_PICKUPS;
@@ -31338,10 +31585,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicPickup
-							printf("CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), pos);
+							format(logtmp, sizeof logtmp, "CreateDynamicPickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), pos);
 						#else
-							printf("CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), pos);
+							format(logtmp, sizeof logtmp, "CreatePickup(%d, %d, %0.4f, %0.4f, %0.4f, %d);", strval(found[0]), strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), pos);
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicPickup
 						if(pc == INVALID_STREAMER_ID) pc = MAX_UC_PICKUPS;
@@ -31356,7 +31605,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetCheckpoint(floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+						format(logtmp, sizeof logtmp, "SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateDynamicCP(", true)) != -1 && cc < 1)
@@ -31366,7 +31617,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetCheckpoint(floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						format(logtmp, sizeof logtmp, "SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateDynamicCPEx(", true)) != -1 && cc < 1)
@@ -31376,7 +31629,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetCheckpoint(floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						format(logtmp, sizeof logtmp, "SetPlayerCheckpoint(playerid, %0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "SetPlayerRaceCheckpoint(", true)) != -1 && rcc < 1)
@@ -31386,7 +31641,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetRaceCheckpoint(strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), floatstr(found[8]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), floatstr(found[8]));
+						format(logtmp, sizeof logtmp, "SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]), floatstr(found[8]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateDynamicRaceCP(", true)) != -1 && rcc < 1)
@@ -31396,7 +31653,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetRaceCheckpoint(strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+						format(logtmp, sizeof logtmp, "SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "CreateDynamicRaceCPEx(", true)) != -1 && rcc < 1)
@@ -31406,7 +31665,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					SetRaceCheckpoint(strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
 					#if defined CREATOR_DEBUG
-						printf("SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+						format(logtmp, sizeof logtmp, "SetPlayerRaceCheckpoint(playerid, %d, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f, %0.4f);", strval(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), floatstr(found[6]), floatstr(found[7]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "SetPlayerMapIcon(", true)) != -1 && ic < MAX_UC_MAPICONS)
@@ -31420,10 +31681,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicMapIcon
-							printf("CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, -1, -1, -1, 200.0, %d);", floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+							format(logtmp, sizeof logtmp, "CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, -1, -1, -1, 200.0, %d);", floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
 						#else
-							printf("SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
+							format(logtmp, sizeof logtmp, "SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), strval(found[5]), strval(found[6]), strval(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicMapIcon
 						if(ic == INVALID_STREAMER_ID) ic = MAX_UC_MAPICONS;
@@ -31442,10 +31705,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicMapIcon
-							printf("CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, -1, -1, -1, 200.0, %d);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[9]));
+							format(logtmp, sizeof logtmp, "CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, -1, -1, -1, 200.0, %d);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[9]));
 						#else
-							printf("SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[9]));
+							format(logtmp, sizeof logtmp, "SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[9]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicMapIcon
 						if(ic == INVALID_STREAMER_ID) ic = MAX_UC_MAPICONS;
@@ -31464,10 +31729,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamicMapIcon
-							printf("CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "CreateDynamicMapIcon(%0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[5]));
 						#else
-							printf("SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[5]));
+							format(logtmp, sizeof logtmp, "SetPlayerMapIcon(playerid, %d, %0.4f, %0.4f, %0.4f, %d, 0x%08x, %d);", ic, floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), strval(found[3]), strval(found[4]), strval(found[5]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamicMapIcon
 						if(ic == INVALID_STREAMER_ID) ic = MAX_UC_MAPICONS;
@@ -31481,7 +31748,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					split(strtmp, found, ',', sizeof found, sizeof found[]);
 					gc = GangZoneCreate(floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
 					#if defined CREATOR_DEBUG
-						printf("GangZoneCreate(%0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						format(logtmp, sizeof logtmp, "GangZoneCreate(%0.4f, %0.4f, %0.4f, %0.4f);", floatstr(found[0]), floatstr(found[1]), floatstr(found[2]), floatstr(found[3]));
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					if(gc == -1) gc = MAX_GANG_ZONES;
 				}
@@ -31495,7 +31764,9 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					else pos = strval(found[1]);
 					GangZoneShowForAll(gc, pos);
 					#if defined CREATOR_DEBUG
-						printf("GangZoneShowForAll(%d, 0x%08x);", gc, pos);
+						format(logtmp, sizeof logtmp, "GangZoneShowForAll(%d, 0x%08x);", gc, pos);
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "Create3DTextLabel(", true)) != -1 && lc < MAX_UC_3DTEXT_GLOBAL)
@@ -31516,10 +31787,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamic3DTextLabel
-							printf("CreateDynamic3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, 65535, 65535, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[7]), strval(found[6]));
+							format(logtmp, sizeof logtmp, "CreateDynamic3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, 65535, 65535, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[7]), strval(found[6]));
 						#else
-							printf("Create3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[6]), strval(found[7]));
+							format(logtmp, sizeof logtmp, "Create3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[6]), strval(found[7]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamic3DTextLabel
 					if(lc == INVALID_STREAMER_ID) lc = MAX_UC_3DTEXT_GLOBAL;
@@ -31553,10 +31826,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#endif
 					#if defined CREATOR_DEBUG
 						#if defined CreateDynamic3DTextLabel
-							printf("CreateDynamic3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, 65535, 65535, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[8]), pos2);
+							format(logtmp, sizeof logtmp, "CreateDynamic3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, 65535, 65535, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), strval(found[8]), pos2);
 						#else
-							printf("Create3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), pos2, strval(found[8]));
+							format(logtmp, sizeof logtmp, "Create3DTextLabel(\"%s\", 0x%08x, %0.4f, %0.4f, %0.4f, %0.4f, %d, %d);", found[0], pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]), floatstr(found[5]), pos2, strval(found[8]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 					#if defined CreateDynamic3DTextLabel
 					if(lc == INVALID_STREAMER_ID) lc = MAX_UC_3DTEXT_GLOBAL;
@@ -31586,10 +31861,12 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#if defined CREATOR_DEBUG
 						#if defined Streamer_SetIntData\
 							&& defined Streamer_SetItemPos
-							printf("AttachDyn3DTextToPlayer(%d, %d, %0.4f, %0.4f, %0.4f);", lc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "AttachDyn3DTextToPlayer(%d, %d, %0.4f, %0.4f, %0.4f);", lc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#else
-							printf("Attach3DTextLabelToPlayer(%d, %d, %0.4f, %0.4f, %0.4f);", lc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "Attach3DTextLabelToPlayer(%d, %d, %0.4f, %0.4f, %0.4f);", lc, pos, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 				else if((i = strfind(strtmp, "Attach3DTextLabelToVehicle(", true)) != -1)
@@ -31608,16 +31885,20 @@ LoadCreatorMap(const filename[], clearoldmap = true)
 					#if defined CREATOR_DEBUG
 						#if defined Streamer_SetIntData\
 							&& defined Streamer_SetItemPos
-							printf("AttachDyn3DTextToVehicle(%d, %d, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "AttachDyn3DTextToVehicle(%d, %d, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#else
-							printf("Attach3DTextLabelToVehicle(%d, %d, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
+							format(logtmp, sizeof logtmp, "Attach3DTextLabelToVehicle(%d, %d, %0.4f, %0.4f, %0.4f);", pos, pos2, floatstr(found[2]), floatstr(found[3]), floatstr(found[4]));
 						#endif
+						SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+						print(logtmp);
 					#endif
 				}
 			}
 			#if defined CREATOR_DEBUG
-				printf("Loaded %d objects, %d vehicles, %d actors, %d pickups, %d checkpoints,\n%d race checkpoints, %d map icons, %d gangzones, %d 3D text labels, %d removed objects",
+				format(logtmp, sizeof logtmp, "Loaded %d objects, %d vehicles, %d actors, %d pickups, %d checkpoints,\n%d race checkpoints, %d map icons, %d gangzones, %d 3D text labels, %d removed objects",
 				ObjectsCount, VehiclesCount, ActorsCount, PickupsCount, CheckpointCount, RaceCpCount, IconsCount, ZonesCount, LabelsCount, RemoveCount);
+				SendClientMessageToAll(DEFAULT_COLOR, logtmp);
+				print(logtmp);
 			#endif
 			fclose(pfile);
 			return cleared;
@@ -31669,13 +31950,38 @@ DeleteCreatorMap(const filename[])
 	return 0;
 }
 
+IsMapListFileCreated(const filename[])
+{
+	if(fexist(filename))
+	{
+		new File:pfile;
+		if((pfile = fopen(filename)))
+		{
+			new bool:t;
+			static strtmp[MAX_MAPNAME_LENGTH];
+			strtmp[0] = EOS;
+			while(fread(pfile, strtmp))
+			{
+				if(!IsEmptyString(strtmp))
+				{
+					t = true;
+					break;
+				}
+			}
+			fclose(pfile);
+			if(t) return 1;
+		}
+	}
+	return 0;
+}
+
 IsEmptyString(const string[])
 {
 	for(new i; string[i] != 0; i++)
 	{
 		switch(string[i])
 		{
-			case ' ': continue;
+			case ' ', '\r', '\n': continue;
 			default: return 0;
 		}
 	}
@@ -31720,6 +32026,17 @@ splitex(const source[], destination[][], delim, delim2, destsize, destlen)
 			aNum++;
 		}
 	}
+	return 1;
+}
+
+strcpy2(dest[], const source[], maxlength = sizeof dest)
+{
+	new i;
+	for(; source[i] != 0; i++)
+	{
+		if(source[i] == '\r' || source[i] == '\n') break;
+	}
+	strmid(dest, source, 0, i, maxlength);
 	return 1;
 }
 
@@ -32112,6 +32429,15 @@ IsValidVehicleModel(modelid)
 	if(modelid == 6754) return 1;
 	if(6757 <= modelid <= 6799) return 1;
 	if(modelid == 7974) return 1;
+	return 0;
+}
+
+IsATrainPart(modelid)
+{
+	switch(modelid)
+	{
+		case 449, 537, 538, 569, 570: return 1;
+	}
 	return 0;
 }
 
