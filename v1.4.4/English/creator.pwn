@@ -11541,12 +11541,20 @@ public OnPlayerUpdate(playerid)
 			}
 		}
 		else if(CreatorInfo[playerid][ucSelectedVeh] != INVALID_VEHICLE_ID)
-		{
+		{	
 			GetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
 			GetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
 			GetSelectedVehicleNextPos(keys, lr, ud, GetPlayerCameraFacingAngle(playerid), PX, PY, PZ, VZ);
-			SetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
-			SetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
+			if(keys & KEY_FIRE) {
+				new vModelidAux = VehiclesInfo[CreatorInfo[playerid][ucSelectedVeh]][vModelid];
+				uc_DestroyVehicle(CreatorInfo[playerid][ucSelectedVeh]);
+				CreatorInfo[playerid][ucSelectedVeh] = uc_CreateVehicle(vModelidAux, PX, PY, PZ, VZ, -1, -1, 1);
+				SetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
+			} else {
+				SetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
+				SetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
+			}
+			
 			if(INTERFACE_VISIBILITY)
 			{
 				if(keys & KEY_FIRE) format(strtmp, sizeof strtmp, "Vehicle %d (id %d)~n~z: %.4f", VehiclesInfo[CreatorInfo[playerid][ucSelectedVeh]][vModelid], CreatorInfo[playerid][ucSelectedVeh], VZ);
