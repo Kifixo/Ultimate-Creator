@@ -11547,7 +11547,7 @@ public OnPlayerUpdate(playerid)
 			GetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
 			GetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
 			GetSelectedVehicleNextPos(keys, lr, ud, GetPlayerCameraFacingAngle(playerid), PX, PY, PZ, VZ);
-			if(keys & KEY_FIRE) {
+			if(keys & KEY_FIRE && keys & KEY_JUMP) {
 				new vModelidAux = VehiclesInfo[CreatorInfo[playerid][ucSelectedVeh]][vModelid];
 				uc_DestroyVehicle(CreatorInfo[playerid][ucSelectedVeh]);
 				CreatorInfo[playerid][ucSelectedVeh] = uc_CreateVehicle(vModelidAux, PX, PY, PZ, VZ, -1, -1, 1);
@@ -15287,7 +15287,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 						}
 						static strtmp[145];
 						new Float:rZ = floatstr(inputtext);
-						SetVehicleZAngle(clickedid, rZ);
+						// SetVehicleZAngle won't work so, delete the vehicle and create a new one
+						new vModelidAux = VehiclesInfo[clickedid][vModelid];
+						new Float:PXAux = VehiclesInfo[clickedid][vX];
+						new Float:PYAux = VehiclesInfo[clickedid][vY];
+						new Float:PZAux = VehiclesInfo[clickedid][vZ];
+						uc_DestroyVehicle(clickedid);
+						CreatorInfo[playerid][ucClickedVeh] = uc_CreateVehicle(vModelidAux, PXAux, PYAux, PZAux, rZ, -1, -1, 1);
 						format(strtmp, sizeof strtmp, VEHICLE_TELEPORTED_TO_RZ, clickedid, rZ);
 						SendClientMessage(playerid, DEFAULT_COLOR, strtmp);
 					}
