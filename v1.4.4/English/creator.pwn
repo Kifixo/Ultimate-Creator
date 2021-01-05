@@ -11547,7 +11547,8 @@ public OnPlayerUpdate(playerid)
 			GetVehiclePos(CreatorInfo[playerid][ucSelectedVeh], PX, PY, PZ);
 			GetVehicleZAngle(CreatorInfo[playerid][ucSelectedVeh], VZ);
 			GetSelectedVehicleNextPos(keys, lr, ud, GetPlayerCameraFacingAngle(playerid), PX, PY, PZ, VZ);
-			if(keys & KEY_FIRE && keys & KEY_JUMP) {
+			if((keys & KEY_FIRE && lr & KEY_LEFT) || (keys & KEY_FIRE && lr & KEY_RIGHT)) {
+				GetSelectedVehicleNextPos(keys, lr, ud, GetPlayerCameraFacingAngle(playerid), PX, PY, PZ, VZ);
 				new vModelidAux = VehiclesInfo[CreatorInfo[playerid][ucSelectedVeh]][vModelid];
 				uc_DestroyVehicle(CreatorInfo[playerid][ucSelectedVeh]);
 				CreatorInfo[playerid][ucSelectedVeh] = uc_CreateVehicle(vModelidAux, PX, PY, PZ, VZ, -1, -1, 1);
